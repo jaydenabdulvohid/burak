@@ -1,10 +1,25 @@
 console.log("BISMILLAH");
-function gerReverse(str: string): string {
-  return str.split("").reverse().join("");
+
+// H-task yechimi
+function getPositive(arr: number[]): string {
+  // Arrayni musbat qiymatlarini olib qaytiramiz
+  const positiveNumbers = arr.filter((num) => num > 0);
+
+  // Musbat qiymatlarni stringga aylantiramiz
+  const positiveString = positiveNumbers.join("");
+
+  return positiveString;
 }
 
 // Test
-console.log(gerReverse("hello")); // "olleh"
+console.log(getPositive([1, -4, 2])); // "12"
+
+// function gerReverse(str: string): string {
+//   return str.split("").reverse().join("");
+// }
+
+// // Test
+// console.log(gerReverse("hello")); // "olleh"
 
 // function getReverse(str: string): string {
 //   return str.split("").reverse().join("");
