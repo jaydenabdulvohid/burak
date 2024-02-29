@@ -9,6 +9,13 @@
 
 */
 
+/**
+  Traditional Api
+  Rest Api
+  GraphQl Api
+  ...
+ */
+
 // console.log("BISMILLAH");
 
 /* H-task yechimi
