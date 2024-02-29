@@ -3,7 +3,7 @@
   - Naming Starndarts
          function methodi variable => CAMEL case goHome
          Classlar => PASCAL case             
-         Folderlarga => KEBAB                                    
+         folderlar, file => KEBAB                                    
          css classlar => SNAKE    
     - Error handling                               
 
