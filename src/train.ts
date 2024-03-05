@@ -33,6 +33,12 @@ console.log(getDigits("m14i1t")); // "141"
   ...
  */
 
+/**
+ * Traditional Frontend Development => BSSR -> (ADMIN) Bacakent server site rendring => EJS freamwork
+ * Modern Frontent Development      => SPA (USER, aplication) -> Single page Aplication => REACT
+
+ */
+
 // console.log("BISMILLAH");
 
 /* H-task yechimi
