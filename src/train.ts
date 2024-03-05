@@ -1,3 +1,20 @@
+// I -task yechimi
+/**
+ * Berilgan stringda bo'lgan raqamlarni ajratib olib yangi string sifatida qaytaradi.
+ *
+ * @param str String, ichida raqamlar bo'lishi mumkin.
+ * @returns Ajratilgan raqamlardan iborat string.
+ */
+function getDigits(str: string): string {
+  // Stringdan faqat raqamlarni ajratib olamiz
+  const digitsOnly = str.replace(/\D/g, "");
+
+  return digitsOnly;
+}
+
+// Test
+console.log(getDigits("m14i1t")); // "141"
+
 /* Project Standarts:
   - Login standarts
   - Naming Starndarts
