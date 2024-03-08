@@ -18,7 +18,6 @@ console.log(result); // "Uzbekistan" chiqadi
 //  * @returns Ajratilgan raqamlardan iborat string.
 //  */
 // function getDigits(str: string): string {
-//   // Stringdan faqat raqamlarni ajratib olamiz
 //   const digitsOnly = str.replace(/\D/g, "");
 
 //   return digitsOnly;
