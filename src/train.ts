@@ -1,14 +1,14 @@
-function findLongestWord(s: string): string {
-  const words: string[] = s.split(" "); // stringni so'zlarga bo'lib ajratamiz
-  const longestWord: string = words.reduce((prevWord, currentWord) => {
-    return prevWord.length >= currentWord.length ? prevWord : currentWord;
-  }, "");
-  return longestWord;
-}
+// function findLongestWord(s: string): string {
+//   const words: string[] = s.split(" "); // stringni so'zlarga bo'lib ajratamiz
+//   const longestWord: string = words.reduce((prevWord, currentWord) => {
+//     return prevWord.length >= currentWord.length ? prevWord : currentWord;
+//   }, "");
+//   return longestWord;
+// }
 
-// Misol
-const result: string = findLongestWord("I come from Uzbekistan");
-console.log(result); // "Uzbekistan" chiqadi
+// // Misol
+// const result: string = findLongestWord("I come from Uzbekistan");
+// console.log(result); // "Uzbekistan" chiqadi
 
 // // I -task yechimi
 // /**
@@ -79,3 +79,8 @@ console.log(result); // "Uzbekistan" chiqadi
 
 // // console.log(getReverse("salom"));
 // */
+
+/**
+ * har bitta request ichiga ozini joylaydi  join
+ * Cocues self destroy
+ */
