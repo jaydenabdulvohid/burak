@@ -7,6 +7,7 @@ import { MORGAN_FORAMAT } from "./libs/config";
 
 import session from "express-session";
 import ConnectMongoDB from "connect-mongodb-session";
+import { T } from "./libs/types/common";
 
 const MongoDBStore = ConnectMongoDB(session);
 const store = new MongoDBStore({
@@ -15,7 +16,6 @@ const store = new MongoDBStore({
 });
 
 /**  1-ENTRANCE **/
-
 const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
@@ -34,6 +34,11 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(function (req, res, next) {
+  const sessionInstance = req.session as T;
+  res.locals.member = sessionInstance.member;
+  next();
+});
 /**  3- VIEWS **/
 
 app.set("views", path.join(__dirname, "views"));
