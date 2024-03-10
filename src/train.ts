@@ -1,3 +1,20 @@
+/**
+ * Berilgan stringda bo'lgan unli harflar sonini qaytaradi.
+ *
+ * @param str String, ichida unli harflar bo'lishi mumkin.
+ * @returns Unli harflar soni.
+ */
+function countVowels(str: string): number {
+  // Stringni ichidagi unli harflarni hisoblaymiz
+  const vowels = str.match(/[aeiou]/gi);
+
+  // Agar unli harflar mavjud bo'lsa, ularning sonini qaytaramiz, aks holda 0 ni qaytaradi
+  return vowels ? vowels.length : 0;
+}
+
+// Test
+console.log(countVowels("string")); // 1
+
 // function findLongestWord(s: string): string {
 //   const words: string[] = s.split(" "); // stringni so'zlarga bo'lib ajratamiz
 //   const longestWord: string = words.reduce((prevWord, currentWord) => {
