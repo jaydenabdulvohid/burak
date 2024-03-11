@@ -1,9 +1,30 @@
 /**
+ * Berilgan stringni so'zlar ketma-ketligini saqlab, so'zlarni chappasiga yozib qaytaradi.
+ *
+ * @param str String, ichida so'zlar bo'lishi mumkin.
+ * @returns Chap qilingan so'zlar ketma-ketligi.
+ */
+function reverseSentence(str: string): string {
+  // Stringni so'zlarga ajratib olamiz
+  const words = str.split(" ");
+
+  // So'zlar ketma-ketligini saqlaymiz va chappasiga yozib chiqamiz
+  const reversedSentence = words
+    .map((word) => word.split("").reverse().join(""))
+    .join(" ");
+
+  return reversedSentence;
+}
+
+// Test
+console.log(reverseSentence("we like coding!")); // "ew ekil gnidoc"
+
+/**
  * Berilgan stringda bo'lgan unli harflar sonini qaytaradi.
  *
  * @param str String, ichida unli harflar bo'lishi mumkin.
  * @returns Unli harflar soni.
- */
+ 
 function countVowels(str: string): number {
   // Stringni ichidagi unli harflarni hisoblaymiz
   const vowels = str.match(/[aeiou]/gi);
