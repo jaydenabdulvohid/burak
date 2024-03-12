@@ -135,3 +135,5 @@ console.log(countVowels("string")); // 1
  * Database validation
  *
  */
+
+//    return ele.path.replace(/\\/g, "/"); windowsda \ buni / bunga togirlab berad
