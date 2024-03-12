@@ -64,29 +64,7 @@ console.log(countVowels("string")); // 1
 // // Test
 // console.log(getDigits("m14i1t")); // "141"
 
-// /* Project Standarts:
-//   - Login standarts
-//   - Naming Starndarts
-//          function methodi variable => CAMEL case goHome
-//          Classlar => PASCAL case
-//          folderlar, file => KEBAB
-//          css classlar => SNAKE
-//     - Error handling
-
-// */
-
-// /**
-//   Traditional Api
-//   Rest Api
-//   GraphQl Api
-//   ...
-//  */
-
-// /**
-//  * Traditional Frontend Development => BSSR -> (ADMIN) Bacakent server site rendring => EJS freamwork
-//  * Modern Frontent Development      => SPA (USER, aplication) -> Single page Aplication => REACT
-
-//  */
+//
 
 // // console.log("BISMILLAH");
 
@@ -121,4 +99,39 @@ console.log(countVowels("string")); // 1
 /**
  * har bitta request ichiga ozini joylaydi  join
  * Cocues self destroy
+ */
+
+/* Project Standarts:
+//   - Login standarts
+//   - Naming Starndarts
+//          function methodi variable => CAMEL case goHome
+//          Classlar => PASCAL case
+//          folderlar, file => KEBAB
+//          css classlar => SNAKE
+//     - Error handling
+
+// */
+
+/* Request
+  Traditional Api
+   Rest Api
+   GraphQl Api
+  ...
+
+/* Frontend  Devalopment 
+ Traditional Frontend Development => BSSR -> (ADMIN) Bacakent server site rendring => EJS freamwork
+ Modern Frontent Development      => SPA (USER, aplication) -> Single page Aplication => REACT
+
+*/
+
+/** Cookies
+ * request join
+ * self destroy
+ */
+
+/** VALIDATION
+ * Frontend Validation
+ * Backand validation
+ * Database validation
+ *
  */

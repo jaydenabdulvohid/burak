@@ -54,4 +54,3 @@ const memberSchema = new Schema(
 );
 
 export default mongoose.model("Member", memberSchema);
-``;
