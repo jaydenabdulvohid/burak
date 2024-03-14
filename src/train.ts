@@ -1,10 +1,21 @@
+console.log("function:");
+
+function getSquareNumbers(
+  numbers: number[]
+): { number: number; square: number }[] {
+  return numbers.map((num) => ({ number: num, square: num * num }));
+}
+
+// Test
+console.log(getSquareNumbers([1, 2, 3])); // [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}]
+
 /**
  * Berilgan stringni so'zlar ketma-ketligini saqlab, so'zlarni chappasiga yozib qaytaradi.
  *
  * @param str String, ichida so'zlar bo'lishi mumkin.
  * @returns Chap qilingan so'zlar ketma-ketligi.
  */
-function reverseSentence(str: string): string {
+/*nfunction reverseSentence(str: string): string {
   // Stringni so'zlarga ajratib olamiz
   const words = str.split(" ");
 
@@ -17,7 +28,7 @@ function reverseSentence(str: string): string {
 }
 
 // Test
-console.log(reverseSentence("we like coding!")); // "ew ekil gnidoc"
+console.log(reverseSentence("we like coding!")); // "ew ekil gnidoc"*/
 
 /**
  * Berilgan stringda bo'lgan unli harflar sonini qaytaradi.
