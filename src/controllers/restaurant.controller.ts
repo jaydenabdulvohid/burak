@@ -14,7 +14,7 @@ restaurantController.goHome = (req: Request, res: Response) => {
     res.render("home");
     // Response types => send | json | redirect | end | render
   } catch (err) {
-    console.log("Error, goHome", err);
+    console.log("Error, goHome:", err);
     res.redirect("/admin");
   }
 };
@@ -24,7 +24,7 @@ restaurantController.getSignup = (req: Request, res: Response) => {
     console.log("getSignup");
     res.render("signup");
   } catch (err) {
-    console.log("Error, getSignup", err);
+    console.log("Error, getSignup:", err);
     res.redirect("/admin");
   }
 };
@@ -34,7 +34,7 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     console.log("getLogin");
     res.render("login");
   } catch (err) {
-    console.log("Error, getLogin", err);
+    console.log("Error, getLogin:", err);
     res.redirect("/admin");
   }
 };
@@ -59,7 +59,7 @@ restaurantController.processSignup = async (
       res.redirect("/admin/product/all");
     });
   } catch (err) {
-    console.log("Error, processSignup", err);
+    console.log("Error, processSignup:", err);
     const message =
       err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
     res.send(
@@ -82,7 +82,7 @@ restaurantController.processLogin = async (
       res.redirect("/admin/product/all");
     });
   } catch (err) {
-    console.log("Error, processLogin", err);
+    console.log("Error, processLogin:", err);
     const message =
       err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
     res.send(
@@ -98,7 +98,29 @@ restaurantController.logout = async (req: AdminRequest, res: Response) => {
       res.redirect("/admin");
     });
   } catch (err) {
-    console.log("Error, logout", err);
+    console.log("Error, logout:", err);
+    res.redirect("/admin");
+  }
+};
+
+restaurantController.getUsers = async (req: Request, res: Response) => {
+  try {
+    console.log("getUsers");
+    const result = await memberService.getUsers();
+    console.log("result:", result);
+
+    res.render("users", { users: result });
+  } catch (err) {
+    console.log("Error, getUsers:", err);
+    res.redirect("/admin/login");
+  }
+};
+
+restaurantController.updateChosenUser = (req: Request, res: Response) => {
+  try {
+    console.log("updateChosenUser");
+  } catch (err) {
+    console.log("Error, updateChosenUser:", err);
     res.redirect("/admin");
   }
 };
