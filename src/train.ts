@@ -1,13 +1,22 @@
-console.log("function:");
+function palindromCheck(str: string): boolean {
+  // Stringni teskari tartibda qo'yish
+  const reversedStr = str.split("").reverse().join("");
 
-function getSquareNumbers(
-  numbers: number[]
-): { number: number; square: number }[] {
-  return numbers.map((num) => ({ number: num, square: num * num }));
+  // Asl va teskari stringlarni solishtirish
+  return str === reversedStr;
 }
+console.log(palindromCheck("dad"));
+console.log(palindromCheck("son"));
+// console.log("function:");
 
-// Test
-console.log(getSquareNumbers([1, 2, 3])); // [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}]
+// function getSquareNumbers(
+//   numbers: number[]
+// ): { number: number; square: number }[] {
+//   return numbers.map((num) => ({ number: num, square: num * num }));
+// }
+
+// // Test
+// console.log(getSquareNumbers([1, 2, 3])); // [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}]
 
 /**
  * Berilgan stringni so'zlar ketma-ketligini saqlab, so'zlarni chappasiga yozib qaytaradi.
