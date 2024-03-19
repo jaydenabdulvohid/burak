@@ -1,13 +1,28 @@
-function palindromCheck(str: string): boolean {
-  // Stringni teskari tartibda qo'yish
-  const reversedStr = str.split("").reverse().join("");
+function calculateSumOfNumbers(array: any[]) {
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    console.log("array i:", array[i]);
+    if (typeof array[i] === "number") {
+      console.log("string:", array[i]);
 
-  // Asl va teskari stringlarni solishtirish
-  return str === reversedStr;
+      count += array[i];
+    }
+  }
+  return count;
 }
-console.log(palindromCheck("dad"));
-console.log(palindromCheck("son"));
-// console.log("function:");
+const result = calculateSumOfNumbers([15, "98", { son: 10 }, "a", 30]);
+console.log("result:", result);
+
+// function palindromCheck(str: string): boolean {
+//   // Stringni teskari tartibda qo'yish
+//   const reversedStr = str.split("").reverse().join("");
+
+//   // Asl va teskari stringlarni solishtirish
+//   return str === reversedStr;
+// }
+// console.log(palindromCheck("dad"));
+// console.log(palindromCheck("son"));
+// // console.log("function:");
 
 // function getSquareNumbers(
 //   numbers: number[]
