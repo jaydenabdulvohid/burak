@@ -1,17 +1,24 @@
-function calculateSumOfNumbers(array: any[]) {
-  let count = 0;
-  for (let i = 0; i < array.length; i++) {
-    console.log("array i:", array[i]);
-    if (typeof array[i] === "number") {
-      console.log("string:", array[i]);
-
-      count += array[i];
-    }
-  }
-  return count;
+function objectToArray(obj: { [key: string]: any }): [string, any][] {
+  return Object.entries(obj);
 }
-const result = calculateSumOfNumbers([15, "98", { son: 10 }, "a", 30]);
-console.log("result:", result);
+
+// Test
+console.log(objectToArray({ a: 10, b: 20 })); // [['a', 10], ['b', 20]]
+
+// function calculateSumOfNumbers(array: any[]) {
+//   let count = 0;
+//   for (let i = 0; i < array.length; i++) {
+//     console.log("array i:", array[i]);
+//     if (typeof array[i] === "number") {
+//       console.log("string:", array[i]);
+
+//       count += array[i];
+//     }
+//   }
+//   return count;
+// }
+// const result = calculateSumOfNumbers([15, "98", { son: 10 }, "a", 30]);
+// console.log("result:", result);
 
 // function palindromCheck(str: string): boolean {
 //   // Stringni teskari tartibda qo'yish
