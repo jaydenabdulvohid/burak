@@ -1,9 +1,9 @@
-function objectToArray(obj: { [key: string]: any }): [string, any][] {
+console.log("HELLO this is train!");
+
+function objectToArray(obj: object) {
   return Object.entries(obj);
 }
-
-// Test
-console.log(objectToArray({ a: 10, b: 20 })); // [['a', 10], ['b', 20]]
+console.log(objectToArray({ a: 10, b: 20 }));
 
 // function calculateSumOfNumbers(array: any[]) {
 //   let count = 0;
