@@ -1,9 +1,19 @@
-console.log("HELLO this is train!");
-
-function objectToArray(obj: object) {
-  return Object.entries(obj);
+function hasProperty(object: { [key: string]: any }, property: string) {
+  return property in object;
 }
-console.log(objectToArray({ a: 10, b: 20 }));
+
+// const result hasProperty({name: "BMW", model: "M3"}, "model"),
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); // true
+
+console.log(hasProperty({ name: "BMW", model: "M3" }, "year")); // false
+// Test
+// Test
+// console.log("HELLO this is train!");
+
+// function objectToArray(obj: object) {
+//   return Object.entries(obj);
+// }
+// console.log(objectToArray({ a: 10, b: 20 }));
 
 // function calculateSumOfNumbers(array: any[]) {
 //   let count = 0;
