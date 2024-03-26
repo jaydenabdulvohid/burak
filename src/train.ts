@@ -1,12 +1,25 @@
-function hasProperty(object: { [key: string]: any }, property: string) {
-  return property in object;
+function calculate(string: string) {
+  const parts = string.split("+");
+  const raqam = parts.reduce(
+    (salom: number, qales: string) => salom + parseInt(qales),
+    0
+  );
+
+  return raqam;
 }
 
-// const result hasProperty({name: "BMW", model: "M3"}, "model"),
-// console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); // true
+// Test qilish
+console.log(calculate("1+3")); // 4
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "year")); // false
-// Test
+// function hasProperty(object: { [key: string]: any }, property: string) {
+//   return property in object;
+// }
+
+// // const result hasProperty({name: "BMW", model: "M3"}, "model"),
+// // console.log(hasProperty({ name: "BMW", model: "M3" }, "model")); // true
+
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "year")); // false
+// // Test
 // Test
 // console.log("HELLO this is train!");
 
