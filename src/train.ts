@@ -1,15 +1,26 @@
-function calculate(string: string) {
-  const parts = string.split("+");
-  const raqam = parts.reduce(
-    (salom: number, qales: string) => salom + parseInt(qales),
-    0
-  );
+const missingNumber = (arr: number[]) => {
+  const sortedArr = arr.sort((a, b) => a - b);
+  for (let i = 0; i < sortedArr.length; i++) {
+    if (sortedArr[i] !== sortedArr[i + 1] - 1) {
+      return sortedArr[i] + 1;
+    }
+  }
+};
 
-  return raqam;
-}
+const result = missingNumber([3, 0, 1]);
+console.log("result: ", result);
+// function calculate(string: string) {
+//   const parts = string.split("+");
+//   const raqam = parts.reduce(
+//     (salom: number, qales: string) => salom + parseInt(qales),
+//     0
+//   );
 
-// Test qilish
-console.log(calculate("1+3")); // 4
+//   return raqam;
+// }
+
+// // Test qilish
+// console.log(calculate("1+3")); // 4
 
 // function hasProperty(object: { [key: string]: any }, property: string) {
 //   return property in object;
